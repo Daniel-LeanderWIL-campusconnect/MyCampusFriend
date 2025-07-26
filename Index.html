@@ -22,31 +22,32 @@
 		}
 		.paragraph {
 			width: 400px;
-			height: 400px;
+			height: 200px;
 		}
-		.marquee-container {
-			
- 			top: 0;
-  			left: 0;
-  			width: 100%;
-  			overflow: hidden;
+	.marquee-container {
+ 			width: 100vw;
+ 			overflow: hidden;
   			height: 300px;
-  			z-index: 10;
-			padding: 50px;
+  			padding: 50px 0;
+ 			position: relative;
+ 			z-index: 10;
+}
 
-		}
+	.marquee-container img {
+  			width: 300px;
+  			height: auto;
+  			position: absolute;
+  			animation: slide 6s linear infinite;
+}
 
-		.marquee-container img {
-			width: 300px;
-			height: auto;
-			animation: slide 5s linear infinite;
-		}
-
-		@keyframes slide {
-			0%   { transform: translateX(-100%); }
-			100% { transform: translateX(650%); }
-		}
-
+	@keyframes slide {
+  		0% {
+    		transform: translateX(-300px);
+}
+  		100% {
+   		 transform: translateX(100vw);
+}
+}
 		.login-form {
 			background-color: linear-gradient(to bottom, skyblue, white) ;
 			padding: 20px;
@@ -58,7 +59,7 @@
 
 		.login-form h2 {
 			text-align: center;
-			margin-bottom: 60px;
+			margin-bottom: 20px;
 			color: #333;
 		}
 
