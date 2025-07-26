@@ -1,46 +1,326 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MyCampusFriend>>>Bookings</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MyCampusFriend &raquo; Bookings</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: skyblue;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+    .container {
+      padding: 20px;
+    }
+    .room-layout {
+      display: flex;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+    .column {
+      flex: 1;
+      min-width: 300px;
+    }
+    .room-card {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 15px;
+      background-color: white;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    .room-content {
+      display: flex;
+      gap: 15px;
+      flex: 1;
+    }
+    .room-info {
+      flex: 2;
+    }
+    .room-info h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      color: skyblue;
+    }
+    .room-info p {
+      margin: 6px 0;
+      color: #333;
+    }
+    .room-buttons {
+      margin-top: 10px;
+      display: flex;
+      gap: 10px;
+    }
+    .room-buttons button {
+      padding: 8px 14px;
+      font-size: 14px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    .book-btn {
+      background-color: #2196F3;
+      color: white;
+    }
+    .book-btn:hover {
+      background-color: #1565c0;
+    }
+    .cancel-btn {
+      background-color: #f44336;
+      color: white;
+    }
+    .cancel-btn:hover {
+      background-color: #b71c1c;
+    }
+  </style>
 </head>
 <body>
-	<style>
-		header {
-            background-color: skyblue;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-        }
-    </style>
-    <header>
-        <div class="logo">MyCampusFriend</div>
-        <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="map.html">Maps</a></li>
-            <li><a href="Academic.html">Academic Report</a></li>
-            
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="settings.html">Settings</a></li>
-        </ul>
-    </header>
+
+  <header>
+    <div class="logo">MyCampusFriend</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="map.html">Maps</a></li>
+      <li><a href="Academic.html">Academic Report</a></li>
+      <li><a href="profile.html">Profile</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </header>
+
+  <div class="container">
+    <h2>Venue Bookings</h2>
+    <div class="room-layout">
+
+      <div class="column">
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 1</h3>
+              <p><strong>Booked by: Joseph</strong></p>
+              <p><strong>Booked for: Programming 101 Extra Classes</strong></p>
+              <p><strong>Time: 14:00 - 15:00</strong></p>
+              <p><strong>Date: 15 July 2025</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 2</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 3</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 4</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 5</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 6</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 7</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 8</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 9</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 10</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 11</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="room-card">
+          <div class="room-content">
+            <div class="room-info">
+              <h3>Venue 12</h3>
+              <p><strong>Booked by:</strong></p>
+              <p><strong>Booked for:</strong></p>
+              <p><strong>Time:</strong></p>
+              <p><strong>Date:</strong></p>
+              <div class="room-buttons">
+                <button class="book-btn">Book Now</button>
+                <button class="cancel-btn">Cancel Booking</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
 
 </body>
 </html>
