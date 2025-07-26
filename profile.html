@@ -1,46 +1,187 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MyCampusFriend>>>Profile</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MyCampusFriend &raquo; Profile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+
+    header {
+      background-color: skyblue;
+      padding: 15px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: white;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      padding: 0;
+      margin: 0;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+    }
+
+    main {
+      max-width: 600px;
+      margin: 30px auto;
+      background: white;
+      padding: 25px 30px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    main h1 {
+      text-align: center;
+      color: skyblue;
+      margin-bottom: 25px;
+      font-weight: 700;
+    }
+
+    .profile-pic-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+    }
+
+    .profile-pic {
+      width: 140px;
+      height: 140px;
+      border-radius: 50%;
+      border: 4px solid skyblue;
+      object-fit: cover;
+      background-color: #ddd;
+    }
+
+    .edit-profile {
+      margin-top: 10px;
+      text-align: center;
+    }
+
+    .edit-link {
+      font-size: 14px;
+      color: #2196F3;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+
+    .edit-link:hover {
+      color: #1565c0;
+      text-decoration: underline;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    label {
+      font-weight: 600;
+      margin-bottom: 6px;
+      display: block;
+      color: #555;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="date"] {
+      padding: 10px 12px;
+      font-size: 15px;
+      border: 1.8px solid #ccc;
+      border-radius: 6px;
+      transition: border-color 0.3s ease;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    input:focus {
+      border-color: skyblue;
+      outline: none;
+    }
+
+    .save-btn {
+      margin-top: 20px;
+      background-color: #2196F3;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: 600;
+      border-radius: 7px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .save-btn:hover {
+      background-color: #1565c0;
+    }
+  </style>
 </head>
 <body>
-	<style>
-		header {
-            background-color: skyblue;
-            padding: 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            color: white;
-        }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 20px;
-        }
-        .nav-links a {
-            text-decoration: none;
-            color: white;
-            font-size: 16px;
-        }
-    </style>
-    <header>
-        <div class="logo">MyCampusFriend</div>
-        <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="map.html">Maps</a></li>
-            <li><a href="Academic.html">Academic Report</a></li>
-            <li><a href="booking.html">Bookings</a></li>
-            
-            <li><a href="settings.html">Settings</a></li>
-        </ul>
-    </header>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">MyCampusFriend</div>
+    <ul class="nav-links">
+      <li><a href="home.html">Home</a></li>
+      <li><a href="map.html">Maps</a></li>
+      <li><a href="Academic.html">Academic Report</a></li>
+      <li><a href="booking.html">Bookings</a></li>
+      <li><a href="settings.html">Settings</a></li>
+    </ul>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <h1>PROFILE</h1>
+
+    <div class="profile-pic-container">
+      <div style="text-align: center;">
+        <img src="PROFILE PIC" alt="Profile Picture" class="profile-pic" />
+        <div class="edit-profile">
+          <a href="#" class="edit-link">Edit Profile</a>
+        </div>
+      </div>
+    </div>
+
+    <form>
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" />
+
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" />
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" />
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" name="dob" />
+
+      <button type="submit" class="save-btn">Save Changes</button>
+    </form>
+  </main>
 
 </body>
 </html>
