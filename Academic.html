@@ -200,12 +200,12 @@ And remember: permanent success comes with persistent effort -- and we've got yo
 
       if (rect.top <= windowHeight - 100) {
         paragraph.classList.add("visible");
-        window.removeEventListener("scroll", checkVisibility); // remove listener once triggered
+        window.removeEventListener("scroll", checkVisibility); 
       }
     }
 
     window.addEventListener("scroll", checkVisibility);
-    checkVisibility(); // check on load in case it's already in view
+    checkVisibility();
   });
 </script>
 </body>
