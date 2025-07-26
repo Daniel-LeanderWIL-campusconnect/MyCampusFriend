@@ -1,18 +1,23 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MyCampusFriend>>>Home</title>
-</head>
-<body>
-	<style>
-		header {
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyCampusFriend &raquo; Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
             background-color: skyblue;
             padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .logo {
             font-size: 24px;
@@ -23,24 +28,117 @@
             list-style: none;
             display: flex;
             gap: 20px;
+            padding: 0;
+            margin: 0;
         }
         .nav-links a {
             text-decoration: none;
             color: white;
             font-size: 16px;
         }
+        .welcome {
+            padding: 20px;
+            background-color: white;
+            text-align: center;
+            font-size: 18px;
+        }
+        .dashboard {
+            display: flex;
+            gap: 20px;
+            justify-content: space-around;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 12px;
+            text-align: left;
+        }
+        th {
+            background-color: skyblue;
+            color: white;
+        }
+        .table-container {
+            flex: 1;
+            min-width: 300px;
+        }
     </style>
+</head>
+<body>
     <header>
         <div class="logo">MyCampusFriend</div>
-        <ul class="nav-links">
-           
-            <li><a href="map.html">Maps</a></li>
-            <li><a href="Academic.html">Academic Report</a></li>
-            <li><a href="booking.html">Bookings</a></li>
-            <li><a href="profile.html">Profile</a></li>
-            <li><a href="settings.html">Settings</a></li>
-        </ul>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="map.html">Maps</a></li>
+                <li><a href="Academic.html">Academic Report</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <div class="welcome">
+        <p>Welcome back to MyCampusFriend! Here’s a quick look at your upcoming events and schedule.</p>
+    </div>
+
+    <div class="dashboard">
+        <div class="table-container">
+            <h3>Your Events</h3>
+            <table>
+                <tr>
+                    <th>Event</th>
+                    <th>Date</th>
+                </tr>
+                <tr>
+                    <td>Science Fair</td>
+                    <td>Aug 15, 2025</td>
+                </tr>
+                <tr>
+                    <td>Club Meeting</td>
+                    <td>Aug 20, 2025</td>
+                </tr>
+                 <tr>
+                    <td>SRC Meeting</td>
+                    <td>Aug 21, 2025</td>
+                </tr>
+                 <tr>
+                    <td>Sports Day</td>
+                    <td>Sep 5, 2025</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="table-container">
+            <h3>Your Schedule</h3>
+            <table>
+                <tr>
+                    <th>Time</th>
+                    <th>Activity</th>
+                </tr>
+                <tr>
+                    <td>08:00 - 09:30</td>
+                    <td>Math Lecture</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:30</td>
+                    <td>Project Meeting</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:30</td>
+                    <td>Project Meeting</td>
+                </tr>
+                <tr>
+                    <td>10:00 - 11:30</td>
+                    <td>Project Meeting</td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
 </html>
