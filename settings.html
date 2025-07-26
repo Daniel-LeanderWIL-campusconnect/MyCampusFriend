@@ -1,18 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MyCampusFriend>>>Settings</title>
-</head>
-<body>
-	<style>
-		header {
-            background-color: skyblue;
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>MyCampusFriend &raquo; Settings</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, skyblue, white);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        header {
+            background-color: rgb(107, 199, 235);
             padding: 15px;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
         }
         .logo {
             font-size: 24px;
@@ -23,24 +31,283 @@
             list-style: none;
             display: flex;
             gap: 20px;
+            padding: 0;
+            margin: 0;
         }
         .nav-links a {
             text-decoration: none;
             color: white;
             font-size: 16px;
         }
+        .settings-container {
+            display: flex;
+            min-height: calc(100vh - 120px);
+            background-color: white;
+            margin: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .settings-sidebar {
+            width: 250px;
+            padding: 20px;
+            border-right: 1px solid #eee;
+        }
+        .settings-sidebar h2 {
+            color: rgb(107, 199, 235);
+            margin-bottom: 20px;
+        }
+        .settings-sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .settings-sidebar li {
+            padding: 10px 15px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .settings-sidebar li:hover {
+            background-color: #f5f5f5;
+        }
+        .settings-sidebar li.active {
+            background-color: rgba(107, 199, 235, 0.2);
+            font-weight: bold;
+        }
+        .settings-content {
+            flex: 1;
+            padding: 30px;
+        }
+        .settings-tab {
+            display: none;
+        }
+        .settings-tab.active {
+            display: block;
+        }
+        .settings-section {
+            margin-bottom: 30px;
+        }
+        .settings-section h3 {
+            color: rgb(107, 199, 235);
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+        }
+        .setting-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 0;
+            border-bottom: 1px solid #f5f5f5;
+        }
+        .setting-label {
+            font-weight: bold;
+            width: 150px;
+        }
+        .setting-value {
+            flex: 1;
+            color: #666;
+        }
+        .btn-danger {
+            background-color: #ff4444;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        .btn-danger:hover {
+            background-color: #cc0000;
+        }
     </style>
+</head>
+<body>
     <header>
         <div class="logo">MyCampusFriend</div>
-        <ul class="nav-links">
-            <li><a href="home.html">Home</a></li>
-            <li><a href="map.html">Maps</a></li>
-            <li><a href="Academic.html">Academic Report</a></li>
-            <li><a href="booking.html">Bookings</a></li>
-            <li><a href="profile.html">Profile</a></li>
-       
-        </ul>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="map.html">Maps</a></li>
+                <li><a href="Academic.html">Academic Report</a></li>
+                <li><a href="booking.html">Bookings</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
     </header>
 
+    <div class="settings-container">
+        <div class="settings-sidebar">
+            <h2>SETTINGS</h2>
+            <ul id="settingsTabs">
+                <li class="active" data-tab="account">Account</li>
+                <li data-tab="preferences">Preferences</li>
+                <li data-tab="privacy">Privacy</li>
+                <li data-tab="security">Security</li>
+            </ul>
+        </div>
+        <div class="settings-content">
+            <!-- Account Tab -->
+            <div id="account" class="settings-tab active">
+                <div class="settings-section">
+                    <h3>Account Settings</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Username</div>
+                        <div class="setting-value">our-username</div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Email</div>
+                        <div class="setting-value">example@example.com</div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Password</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Change Password</div>
+                        <div class="setting-value">
+                            <button>Change Password</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Danger Zone</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Delete Account</div>
+                        <div class="setting-value">
+                            <button class="btn-danger">Delete Account</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preferences Tab -->
+            <div id="preferences" class="settings-tab">
+                <div class="settings-section">
+                    <h3>Appearance</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Theme</div>
+                        <div class="setting-value">
+                            <select>
+                                <option>Light</option>
+                                <option>Dark</option>
+                                <option>System Default</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Font Size</div>
+                        <div class="setting-value">
+                            <select>
+                                <option>Small</option>
+                                <option selected>Medium</option>
+                                <option>Large</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Notifications</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Email Notifications</div>
+                        <div class="setting-value">
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Push Notifications</div>
+                        <div class="setting-value">
+                            <input type="checkbox" checked>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy Tab -->
+            <div id="privacy" class="settings-tab">
+                <div class="settings-section">
+                    <h3>Data Sharing</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Share analytics</div>
+                        <div class="setting-value">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Share with third parties</div>
+                        <div class="setting-value">
+                            <input type="checkbox">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Visibility</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Profile visibility</div>
+                        <div class="setting-value">
+                            <select>
+                                <option>Public</option>
+                                <option selected>Friends only</option>
+                                <option>Private</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Security Tab -->
+            <div id="security" class="settings-tab">
+                <div class="settings-section">
+                    <h3>Security Settings</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Two-factor authentication</div>
+                        <div class="setting-value">
+                            <button>Enable 2FA</button>
+                        </div>
+                    </div>
+                    <div class="setting-item">
+                        <div class="setting-label">Login history</div>
+                        <div class="setting-value">
+                            <button>View history</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="settings-section">
+                    <h3>Active Sessions</h3>
+                    <div class="setting-item">
+                        <div class="setting-label">Current session</div>
+                        <div class="setting-value">
+                            <span>This device (Chrome, Windows)</span>
+                            <button style="margin-left: 10px;">Log out other devices</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabs = document.querySelectorAll('#settingsTabs li');
+            
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs and content
+                    tabs.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.settings-tab').forEach(content => {
+                        content.classList.remove('active');
+                    });
+                    
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+        });
+    </script>
 </body>
 </html>
