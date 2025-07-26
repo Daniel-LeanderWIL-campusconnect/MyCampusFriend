@@ -20,15 +20,19 @@
 			justify-content: center;
 			min-height: 100vh;
 		}
-
+		.paragraph {
+			width: 400px;
+			height: 400px;
+		}
 		.marquee-container {
-			position: absolute;
+			
  			top: 0;
   			left: 0;
   			width: 100%;
   			overflow: hidden;
   			height: 300px;
   			z-index: 10;
+			padding: 50px;
 
 		}
 
@@ -40,7 +44,7 @@
 
 		@keyframes slide {
 			0%   { transform: translateX(-100%); }
-			100% { transform: translateX(220%); }
+			100% { transform: translateX(650%); }
 		}
 
 		.login-form {
@@ -84,13 +88,15 @@
 		}
 	</style>
 </head>
-<body>
-
+	<body>
 	<div class="marquee-container">
 		<img src="images.JPEG" alt="Campus Banner">
 	</div>
-
-	<div class="login-form">
+<h1>Welcome to MyCampusFriend</h1>
+<div class="paragraph">
+<p>It is here where you will find all your student needs. Please feel free to contact us at MyCampusFriendsupport@gmail.com. If you have any questions or need any further help</p>
+</div>
+<div class="login-form">
 		<h2>Login</h2>
 		<form>
 			<input type="text" placeholder="Student ID" required>
