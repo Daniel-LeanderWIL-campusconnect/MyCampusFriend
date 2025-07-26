@@ -1,16 +1,103 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>MyCampusFriend>>>Login</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>MyCampusFriend ››› Login</title>
+	<style>
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			background: linear-gradient(to bottom, skyblue, white);
+			font-family: Arial, sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			min-height: 100vh;
+		}
+
+		.marquee-container {
+			position: absolute;
+ 			top: 0;
+  			left: 0;
+  			width: 100%;
+  			overflow: hidden;
+  			height: 300px;
+  			z-index: 10;
+
+		}
+
+		.marquee-container img {
+			width: 300px;
+			height: auto;
+			animation: slide 5s linear infinite;
+		}
+
+		@keyframes slide {
+			0%   { transform: translateX(-100%); }
+			100% { transform: translateX(220%); }
+		}
+
+		.login-form {
+			background-color: ;
+			padding: 20px;
+			border-radius: 12px;
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+			width: 90%;
+			max-width: 350px;
+		}
+
+		.login-form h2 {
+			text-align: center;
+			margin-bottom: 20px;
+			color: #333;
+		}
+
+		.login-form input[type="text"],
+		.login-form input[type="password"] {
+			width: 100%;
+			padding: 10px;
+			margin: 8px 0;
+			border: 1px solid #ccc;
+			border-radius: 6px;
+		}
+
+		.login-form button {
+			width: 100%;
+			padding: 10px;
+			background-color: #007bff;
+			color: white;
+			border: none;
+			border-radius: 6px;
+			cursor: pointer;
+			font-size: 16px;
+			margin-top: 10px;
+		}
+
+		.login-form button:hover {
+			background-color: #0056b3;
+		}
+	</style>
 </head>
 <body>
-	<style>
 
-    </style>
-<div><img src="images.JPEG"></div>
+	<div class="marquee-container">
+		<img src="images.JPEG" alt="Campus Banner">
+	</div>
 
+	<div class="login-form">
+		<h2>Login</h2>
+		<form>
+			<input type="text" placeholder="Student ID" required>
+			<input type="password" placeholder="ID Number" required>
+			<button><a href="home.html" class="button">Sign In</a></button>
+		</form>
+	</div>
 
 </body>
 </html>
