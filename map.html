@@ -29,6 +29,24 @@
             color: white;
             font-size: 16px;
         }
+        .map-container {
+            position: relative;
+            overflow: hidden;
+            padding-top: 56.25%; 
+            margin: 20px auto;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .map-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
     </style>
     <header>
         <div class="logo">MyCampusFriend</div>
@@ -41,6 +59,14 @@
             <li><a href="settings.html">Settings</a></li>
         </ul>
     </header>
+    <div class="map-container">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=..."
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+    </div>
 
 </body>
 </html>
