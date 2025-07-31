@@ -12,7 +12,7 @@
 		body {
 			margin: 0;
 			padding: 0;
-			background: linear-gradient(to bottom, skyblue, white);
+			background: linear-gradient(to bottom, lightblue, white);
 			font-family: Arial, sans-serif;
 			display: flex;
 			flex-direction: column;
@@ -27,16 +27,17 @@
 		.marquee-container {
  			width: 100vw;
  			overflow: hidden;
-  			height: 350px;
+  			height: 200px;
   			padding: 10px ;
  			position: relative;
  			z-index: 10;
 }
 
 		.marquee-container img {
-  			width: 300px;
+  			width: 150px;
   			height: auto;
   			position: absolute;
+			background-color: transparent;
   			animation: slide 6s linear infinite;
 }
 
@@ -72,7 +73,7 @@
 			border-radius: 6px;
 		}
 
-		.login-form button {
+		.login-form .button {
 			width: 100%;
 			padding: 10px;
 			background-color: #007bff;
@@ -82,9 +83,12 @@
 			cursor: pointer;
 			font-size: 16px;
 			margin-top: 10px;
+			text-decoration: none;
+			display: inline-flex;
+			justify-content: center;	
 		}
 
-		.login-form button:hover {
+		.login-form .button:hover {
 			background-color: #0056b3;
 		}
 	</style>
@@ -93,16 +97,14 @@
 	<div class="marquee-container">
 		<img src="CampusLogo.png" alt="Campus Banner">
 	</div>
-<h1>Welcome to MyCampusFriend</h1>
-<div class="paragraph">
-<p>It is here where you will find all your student needs. Please feel free to contact us at MyCampusFriendsupport@gmail.com. If you have any questions or need any further help</p>
-</div>
+<h1>MyCampusFriend</h1>
+
 <div class="login-form">
 		<h2>Login</h2>
 		<form>
-			<input type="text" placeholder="Student ID" required>
-			<input type="password" placeholder="ID Number" required>
-			<button><a href="home.html" class="button">Sign In</a></button>
+			<input type="text" placeholder="Student/Staff ID" required>
+			<input type="password" placeholder="Password" required>
+			<a href="home.html" class="button">Sign In</a>
 		</form>
 	</div>
 
